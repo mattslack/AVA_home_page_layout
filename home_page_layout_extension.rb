@@ -18,5 +18,6 @@ class HomePageLayoutExtension < Radiant::Extension
     #   add_item "Home Page Layout", "/admin/home_page_layout", :after => "Pages"
     # end
     admin.page.edit.add(:form, "home_page", :after => 'edit_extended_metadata')
+    Page.send :include, CustomTags
   end
 end
